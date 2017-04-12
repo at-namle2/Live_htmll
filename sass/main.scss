@@ -30,7 +30,7 @@ $color: (
   width: 1950
 }
 .container {
-  width: 1172px;
+  width: 1170px;
   margin: 0 auto;
 }
 .clear {
@@ -85,18 +85,114 @@ $color: (
   }
 }
 
-//nav
+/*nav*/
 .navgation {
   height: 71px;
-  background-color: gray;
+  background-color: map-get($color, sky);
+  .nav-menu {
+    margin: 0;
+    padding: 0;
+    .nav-menu-item {
+      width: 160px;
+      background: none;
+      float: left;
+      display: inline-block;
+      border: none;
+      border-left: 1px solid #91e5e9;
+      border-right: 1px solid #37bdc6;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box
+    }
+    a {
+      border: none;
+      padding: 26px 0 27px;
+      display: block;
+      text-transform: uppercase;
+      border-radius: 0;
+      position: relative;
+      letter-spacing: -0.5px;
+      transition: all 0.3s ease 0s;
+      font-weight: 600;
+      overflow: hidden;
+      color: map-get($color, white);
+      font: normal 14px/17px Open Sans;
+      text-align: center;
+      text-decoration: none;
+    }
+    .home {
+      width: 67px;
+    }
+    .home a {
+      text-indent: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      background: url(../images/home.png) no-repeat 50%;
+      display: block;
+    }
+   }
+  .form-seach {
+    position: relative;
+    width: 100%;
+    text-align: right;
+    margin: 16px -36px 0;
+    top: 16px;
+    .input {
+      width: 242px;
+      background: #54bac1;
+      border-radius: 10px;
+      padding-right: 40px;
+      border: none;
+      height: 39px;
+      color: #ffffff;
+      box-shadow: inset 1px 1px 0 #4da9af;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      outline: none;
+    }
+    .submit {
+      position: absolute;
+      right: 10px;
+      top: 8px;
+      margin: 0;
+      padding: 0;
+      text-indent: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      background: url(../images/search.png) no-repeat;
+      width: 22px;
+      height: 23px;
+      box-shadow: none;
+      transition: none;
+      border: none;
+      outline: none;
+    }
+  }
 }
-// slide-shows
+ /*slide-shows*/
 .slide-shows {
   height: 441px;
-  background-color: pink;
+  background: url(../images/slide.png) no-repeat;
+  .caption {
+    width: 80%;
+    padding: 55px;
+  }
+  h2 {
+    font-size: 50px;
+    line-height: 50px;
+    font-weight: 300;
+    color: map-get($color, skype);
+    margin: 0;
+    display: block;
+  }
+  b {
+    font-weight: 600px;
+    color: map-get($color, white);
+  }
 }
 
-// featured
+/*featured*/
 .featured {
   height: 262px;
   background-color: purple;
@@ -119,7 +215,7 @@ $color: (
   }
 }
 
-// news-content
+/*news-content*/
 .news-content {
   height: 430px;
   background-color:pink;
@@ -137,26 +233,75 @@ $color: (
     background-color: red;
   }
 }
-// hello-content
+/**hello-content**/
 .hello-content {
   height: 530px;
   background-color: green;
+  padding: 150px 0;
   .welcome-left {
     width: 571px;
     height: 596px;
     background-color:navy;
     float: left;
+    .gallary {
+      width: 100%;
+    }
+    .galary-event-img {
+      float: left;
+      width: 303px;
+      height: 307px;
+      background-color: purple;
+    }
+    .galary-event-desc {
+      float: left;
+      width: 246px;
+      height: 307px;
+      color: map-get($color, black);
+      background-color: map-get($color, white);
+      }
+    .text {
+      float: left;
+      width: 300px;
+      background-color: pink;
+    }  
   }
   .welcome-right {
     width: 563px;
     height: 596px;
     background-color:gray;
     float: right;
+     .gallary {
+      width: 100%;
+    }
+    .galary-event-img {
+      float: left;
+      width: 303px;
+      height: 307px;
+      background-color: purple;
+    }
+    .galary-event-desc {
+      float: left;
+      width: 246px;
+      height: 307px;
+      background-color: map-get($color, white);
+      }
   }
 }
-// footer-content
+/*footer-content*/
 .footer-content {
   height: 317px;
   background-color: red;
+  .logo-footer-left {
+    float: left;
+    width: 385px;
+    height: 250px;
+    background-color: yellow;
+  }
+  .footer-category-right {
+    float: right;
+    width: 385px;
+    height: 250px;
+    background-color: yellow;
+  }
 }
 
