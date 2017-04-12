@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  margin: 0;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 14px;
+  line-height: 23px;
+  color: #787878;
+  background-color: #292f36; }
+
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase; }
+
+.parallax {
+  background-image: url(../images/bg-top.png);
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 1234px;
+  width: 1950; }
+
+.container {
+  width: 1172px;
+  margin: 0 auto; }
+
+.clear {
+  clear: both; }
+
+.travelino {
+  padding: 70px 0 64px; }
+  .travelino .logo {
+    width: 356px;
+    float: left; }
+    .travelino .logo .tagline {
+      font: 300 15px/1em 'Open Sans',sans-serif;
+      text-transform: uppercase; }
+  .travelino .social {
+    width: 250px;
+    float: right; }
+    .travelino .social .social-nav {
+      margin: 0;
+      padding: 0; }
+    .travelino .social .social-nav-item {
+      display: inline-block;
+      list-style: none;
+      width: 34px;
+      height: 34px;
+      overflow: hidden;
+      border-radius: 50%;
+      line-height: 32px;
+      margin-left: 9px;
+      text-align: center;
+      box-shadow: 2px 2px 0 rgba(29, 29, 34, 0.4);
+      background-color: #2f363e; }
+    .travelino .social .social-nav-item a {
+      text-decoration: none;
+      outline: none; }
+    .travelino .social .social-nav-item img {
+      transition: all 0.3s ease 0s; }
+      .travelino .social .social-nav-item img:hover {
+        background-color: #65d1d7;
+        -webkit-transform: rotateY(360deg);
+        -moz-transform: rotateY(360deg);
+        -ms-transform: rotateY(360deg);
+        -o-transform: rotateY(360deg);
+        transform: rotateY(360deg); }
+
+.navgation {
+  height: 71px;
+  background-color: gray; }
+
+.slide-shows {
+  height: 441px;
+  background-color: pink; }
+
+.featured {
+  height: 262px;
+  background-color: purple; }
+  .featured .carousel {
+    width: 1071px;
+    height: 133px;
+    margin: 0 auto; }
+  .featured .carousel-list {
+    margin: 0px;
+    padding: 0px; }
+  .featured .carousel-list-item {
+    display: inline-block;
+    list-style: none;
+    width: 202px;
+    height: 133px;
+    background-color: red;
+    margin: 0 31px; }
+
+.news-content {
+  height: 430px;
+  background-color: pink; }
+  .news-content .gallary-news {
+    width: 100%;
+    padding: 20px 0;
+    box-sizing: border-box; }
+  .news-content .gallary-news-item {
+    margin: 0 11px;
+    float: left;
+    width: 270px;
+    height: 430px;
+    cursor: pointer;
+    background-color: red; }
+
+.hello-content {
+  height: 530px;
+  background-color: green; }
+  .hello-content .welcome-left {
+    width: 571px;
+    height: 596px;
+    background-color: navy;
+    float: left; }
+  .hello-content .welcome-right {
+    width: 563px;
+    height: 596px;
+    background-color: gray;
+    float: right; }
+
+.footer-content {
+  height: 317px;
+  background-color: red; }
+
+/*# sourceMappingURL=main.css.map */
