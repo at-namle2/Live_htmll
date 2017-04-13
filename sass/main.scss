@@ -1,24 +1,34 @@
+@import 'mixin';
+$color: (
+  color_full: #787878,
+  black: #000,
+  white: #fff,
+  n_social: #2f363e,
+  sky: #65d1d7,
+  gray_bac: #f2f2f2,
+  gray_black: #243238,
+  border_color: #d9bb4b,
+  sky_mo: #7ed7dd,
+  button_btn: #30373f,
+  sky_1: #6ccbaf,
+  sky_2: #cbb359,
+  sky_3: #c06f8c
+  );
+
 * {
   margin: 0;
   padding: 0;
 }
 body {
-  margin: 0;
   font-family: Arial,Helvetica,sans-serif;
   font-size: 14px;
   line-height: 23px;
-  color: #787878;
-  background-color: #292f36;
+  color:map-get($color, color_full);
 }
 h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
 }
-$color: (
-  black: #000,
-  white: #fff,
-  n_social: #2f363e,
-  sky: #65d1d7
-  );
+
 .parallax {
   background-image: url(../images/bg-top.png);
   height: 100%;
@@ -177,6 +187,20 @@ $color: (
   .caption {
     width: 80%;
     padding: 55px;
+    .start-prev {
+      width: 50%;
+      margin-top: 40px;
+      span {
+        background: url(../images/nav-slider.png) no-repeat;
+        display: block;
+        width: 110px;
+        height: 54px;
+        cursor: pointer;
+        &:hover {
+          background-position: 0 -54px;
+        }
+      }
+    }
   }
   h2 {
     font-size: 50px;
@@ -195,11 +219,19 @@ $color: (
 /*featured*/
 .featured {
   height: 262px;
-  background-color: purple;
+  background-color: map-get($color, gray_black);
+  margin-top: 7px;
+  .title-featured {
+    background-color: map-get($color, gray_bac);
+    font-weight: 300;
+    color: map-get($color, black);
+    padding: 22px 32px 23px;
+  }
   .carousel {
     width: 1071px;
     height: 133px;
     margin: 0 auto;
+    margin-top: 25px;
   }
   .carousel-list {
     margin: 0px;
@@ -207,11 +239,47 @@ $color: (
   }
   .carousel-list-item {
     display: inline-block;
+    float: left;
     list-style: none;
-    width: 202px;
-    height: 133px;
+    width: 185px;
+    height: 119px;
     background-color: red;
-    margin: 0 31px;
+    margin: 0 8px;
+    border: 6px solid #fff;
+    &:hover {
+      border-color: map-get($color, border_color);
+    }
+    img {
+      display: block;
+      margin: 0;
+      padding: 0;
+      max-width: 100%;
+      max-height: 100%;
+      border: none;
+    }
+  }
+}
+.nes-nav {
+  position: relative;
+  background-position: top right;
+  .nes-nav-prev {
+    left: -18px;
+    background-position: top right;
+  }
+  .nes-nav-nest {
+    text-indent: -9999px;
+    width: 54px;
+    position: absolute;
+    height: 73px;
+    right: -70px;
+    top: 34px;
+    background-position: -52px 2px;
+    background: transparent url(../images/nav.png) no-repeat top right;
+    opacity: 0.8;
+    cursor: pointer;
+     &:hover {
+      background-position: -51px -73px;
+    }
   }
 }
 
@@ -219,25 +287,50 @@ $color: (
 .news-content {
   height: 430px;
   background-color:pink;
+  margin-top: 30px;
   .gallary-news {
     width: 100%;
-    padding: 20px 0;
     box-sizing: border-box;
   }
   .gallary-news-item {
     margin: 0 11px;
     float: left;
     width: 270px;
-    height: 430px;
+    height: 431px;
     cursor: pointer;
-    background-color: red;
+    @include rgb;
+    .online-img {
+      a {
+        border: none;
+        display: block;
+        overflow: hidden;
+      }
+      img {
+        vertical-align: middle;
+        border: 0;
+        width: 270px;
+        height: 109px;
+      }
+    }
+  }
+  .colorgb {
+     @include colorgb;
+  }
+  .colorgb1 {
+     @include colorgb1;
+  }
+  .colorgb2 {
+     @include colorgb2;
+  }
+  .colorgb3 {
+     @include colorgb3;
   }
 }
 /**hello-content**/
 .hello-content {
   height: 530px;
   background-color: green;
-  padding: 150px 0;
+  padding: 300px 0px;
   .welcome-left {
     width: 571px;
     height: 596px;
@@ -260,10 +353,25 @@ $color: (
       background-color: map-get($color, white);
       }
     .text {
-      float: left;
-      width: 300px;
+      text-align: left;
       background-color: pink;
-    }  
+    }
+    .title-box {
+      .title-hello {
+        font-size: 45px;
+        line-height: 42px;
+        margin: 8px 0 0;
+        color: #5ecdd4;
+        font-weight: 600;
+      }
+      .title-our {
+        font-size: 25px;
+        line-height: 28px;
+        margin: 1px 0 25px 5px;
+        color: #181818;
+        font-weight: 300;
+      }
+    }
   }
   .welcome-right {
     width: 563px;
@@ -293,13 +401,13 @@ $color: (
   background-color: red;
   .logo-footer-left {
     float: left;
-    width: 385px;
+    width: 500px;
     height: 250px;
     background-color: yellow;
   }
   .footer-category-right {
     float: right;
-    width: 385px;
+    width: 500px;
     height: 250px;
     background-color: yellow;
   }

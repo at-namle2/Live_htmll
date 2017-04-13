@@ -1,0 +1,43 @@
+@mixin rgb {
+    h5 {
+      color: map-get($color, white);
+      padding: 18px 32px;
+      margin: 0;
+      font-size: 25px;
+      font-weight: 600;
+    }
+    p {
+       padding: 30px 31px;
+       color: map-get($color, white);
+       margin-bottom: 24px;
+    }
+   .link-more {
+      margin: 0 32px 30px 32px;
+      .btn {
+        background: map-get($color, white);
+        box-shadow: none;
+        padding: 10px 24px;
+        color: map-get($color, sky);
+        font: 600 14px/1.2em 'Open Sans',sans-serif;
+        text-transform: uppercase;
+        text-decoration: none;
+        border: none;
+        font-weight: 600;
+        &:hover {
+          background-color: map-get($color, button_btn);
+        }
+      }
+    }
+}
+@mixin colorgb {
+  background-color: map-get($color, sky);
+}
+@mixin colorgb1 {
+  background-color: map-get($color, sky_1);
+}
+@mixin colorgb2 {
+  background-color: map-get($color, sky_2);
+}
+@mixin colorgb3 {
+  background-color: map-get($color, sky_3);
+}
