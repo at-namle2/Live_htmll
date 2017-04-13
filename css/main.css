@@ -286,74 +286,136 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #c06f8c; }
 
 /**hello-content**/
-.hello-content {
-  height: 530px;
-  background-color: green;
-  padding: 300px 0px; }
-  .hello-content .welcome-left {
-    width: 571px;
-    height: 596px;
-    background-color: navy;
-    float: left; }
-    .hello-content .welcome-left .gallary {
-      width: 100%; }
-    .hello-content .welcome-left .galary-event-img {
-      float: left;
-      width: 303px;
-      height: 307px;
-      background-color: purple; }
-    .hello-content .welcome-left .galary-event-desc {
-      float: left;
-      width: 246px;
-      height: 307px;
-      color: #000;
-      background-color: #fff; }
-    .hello-content .welcome-left .text {
-      text-align: left;
-      background-color: pink; }
-    .hello-content .welcome-left .title-box .title-hello {
-      font-size: 45px;
-      line-height: 42px;
-      margin: 8px 0 0;
-      color: #5ecdd4;
-      font-weight: 600; }
-    .hello-content .welcome-left .title-box .title-our {
-      font-size: 25px;
-      line-height: 28px;
-      margin: 1px 0 25px 5px;
-      color: #181818;
-      font-weight: 300; }
-  .hello-content .welcome-right {
-    width: 563px;
-    height: 596px;
-    background-color: gray;
-    float: right; }
-    .hello-content .welcome-right .gallary {
-      width: 100%; }
-    .hello-content .welcome-right .galary-event-img {
-      float: left;
-      width: 303px;
-      height: 307px;
-      background-color: purple; }
-    .hello-content .welcome-right .galary-event-desc {
-      float: left;
-      width: 246px;
-      height: 307px;
-      background-color: #fff; }
+.hello-content .welcome-left {
+  width: 571px;
+  float: left; }
+  .hello-content .welcome-left .gallary {
+    width: 100%; }
+  .hello-content .welcome-left .galary-event-img {
+    float: left;
+    width: 303px; }
+  .hello-content .welcome-left .galary-event-desc {
+    float: left;
+    width: 267px;
+    height: 182px;
+    color: #000; }
+    .hello-content .welcome-left .galary-event-desc h4 {
+      font-weight: 300;
+      margin-bottom: 15px;
+      font: bold 20px/24px Open Sans; }
+    .hello-content .welcome-left .galary-event-desc p {
+      margin-bottom: 50px; }
+  .hello-content .welcome-left .text {
+    text-align: left; }
+    .hello-content .welcome-left .text p {
+      margin-bottom: 50px; }
+    .hello-content .welcome-left .text .btn1 {
+      background: #292f36;
+      box-shadow: none;
+      padding: 10px 24px;
+      color: #65d1d7;
+      font: 600 14px/1.2em 'Open Sans',sans-serif;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: none;
+      font-weight: 600;
+      box-shadow: 1px 2px 0 rgba(0, 0, 0, 0.3); }
+      .hello-content .welcome-left .text .btn1:hover {
+        background-color: #65d1d7;
+        box-shadow: none;
+        text-decoration: none;
+        color: #fff; }
+  .hello-content .welcome-left .title-box .title-hello {
+    font-size: 45px;
+    line-height: 42px;
+    margin: 8px 0 0;
+    color: #5ecdd4;
+    font-weight: 600; }
+  .hello-content .welcome-left .title-box .title-our {
+    font-size: 25px;
+    line-height: 28px;
+    margin: 1px 0 25px 5px;
+    color: #181818;
+    font-weight: 300; }
+.hello-content .welcome-right {
+  width: 563px;
+  float: right; }
+  .hello-content .welcome-right .gallary {
+    width: 100%; }
+  .hello-content .welcome-right .galary-event-img {
+    float: left;
+    height: 307px; }
+    .hello-content .welcome-right .galary-event-img h2 {
+      margin-bottom: 33px; }
+    .hello-content .welcome-right .galary-event-img p {
+      margin-bottom: 26px; }
+    .hello-content .welcome-right .galary-event-img span {
+      color: #65d1d7; }
+    .hello-content .welcome-right .galary-event-img .btn1 {
+      background: #292f36;
+      box-shadow: none;
+      padding: 10px 24px;
+      color: #65d1d7;
+      font: 600 14px/1.2em 'Open Sans',sans-serif;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: none;
+      font-weight: 600;
+      box-shadow: 1px 2px 0 rgba(0, 0, 0, 0.3); }
+      .hello-content .welcome-right .galary-event-img .btn1:hover {
+        background-color: #65d1d7;
+        box-shadow: none;
+        text-decoration: none;
+        color: #fff; }
+  .hello-content .welcome-right .galary-event-desc {
+    float: left;
+    width: 296px;
+    height: 307px;
+    background-color: #fff;
+    margin-left: -27px; }
+    .hello-content .welcome-right .galary-event-desc h2 {
+      padding: 0 14px;
+      margin-bottom: 33px; }
+    .hello-content .welcome-right .galary-event-desc span {
+      color: #65d1d7; }
+    .hello-content .welcome-right .galary-event-desc p {
+      padding: 0 14px;
+      margin-bottom: 26px; }
+    .hello-content .welcome-right .galary-event-desc b {
+      padding: 0 14px; }
+    .hello-content .welcome-right .galary-event-desc .btn1 {
+      background: #292f36;
+      box-shadow: none;
+      padding: 10px 24px;
+      color: #65d1d7;
+      font: 600 14px/1.2em 'Open Sans',sans-serif;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: none;
+      font-weight: 600;
+      box-shadow: 1px 2px 0 rgba(0, 0, 0, 0.3); }
+      .hello-content .welcome-right .galary-event-desc .btn1:hover {
+        background-color: #65d1d7;
+        box-shadow: none;
+        text-decoration: none;
+        color: #fff; }
+.hello-content .right {
+  margin-top: -65px; }
 
 /*footer-content*/
-.footer-content {
-  height: 317px;
-  background-color: red; }
-  .footer-content .logo-footer-left {
+.full {
+  background-color: #292f36;
+  height: 317px; }
+  .full .footer-content .logo-footer-left {
     float: left;
-    width: 500px;
-    height: 250px;
-    background-color: yellow; }
-  .footer-content .footer-category-right {
+    padding-top: 16px;
+    font: 300 14px/1em 'Open Sans',sans-serif;
+    color: #d9bb4b;
+    text-transform: uppercase;
+    float: none; }
+  .full .footer-content .footer-category-right {
     float: right;
     width: 500px;
-    height: 250px;
-    background-color: yellow; }
+    height: 250px; }
 
 /*# sourceMappingURL=main.css.map */
