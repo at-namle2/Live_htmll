@@ -1,35 +1,5 @@
 @import 'mixin';
-$color: (
-  color_full: #787878,
-  black: #000,
-  white: #fff,
-  n_social: #2f363e,
-  sky: #65d1d7,
-  gray_bac: #f2f2f2,
-  gray_black: #243238,
-  border_color: #d9bb4b,
-  sky_mo: #7ed7dd,
-  button_btn: #30373f,
-  sky_1: #6ccbaf,
-  sky_2: #cbb359,
-  sky_3: #c06f8c,
-  btn: #292f36
-  );
-
-* {
-  margin: 0;
-  padding: 0;
-}
-body {
-  font-family: Arial,Helvetica,sans-serif;
-  font-size: 14px;
-  line-height: 23px;
-  color:map-get($color, color_full);
-}
-h1, h2, h3, h4, h5, h6 {
-    text-transform: uppercase;
-}
-
+@import 'global';
 .parallax {
   background-image: url(../images/bg-top.png);
   height: 100%;
@@ -48,16 +18,20 @@ h1, h2, h3, h4, h5, h6 {
   clear: both;
 }
 .travelino {
-  padding: 70px 0 64px;
+  padding: 70px 0 40px;
   .logo {
     width: 356px;
     float: left;
     .tagline {
-      font: 300 15px/1em 'Open Sans',sans-serif;
-      text-transform: uppercase;
-
+    font-family: 'OpenSans';
+    text-transform: uppercase;
+    position: relative;
+    top: -29px;
+    left: 73px;
+    color: rgb(255, 255, 255);
     }
   }
+}
   .social {
     width: 250px;
     float: right;
@@ -94,11 +68,9 @@ h1, h2, h3, h4, h5, h6 {
       }
     }
   }
-}
-
 /*nav*/
 .navgation {
-  height: 71px;
+  height: 77px;
   background-color: map-get($color, sky);
   .nav-menu {
     margin: 0;
@@ -127,9 +99,10 @@ h1, h2, h3, h4, h5, h6 {
       font-weight: 600;
       overflow: hidden;
       color: map-get($color, white);
-      font: normal 14px/17px Open Sans;
+      font-family: 'OpenSans';
       text-align: center;
       text-decoration: none;
+      cursor: pointer;
     }
     .home {
       width: 67px;
@@ -140,6 +113,7 @@ h1, h2, h3, h4, h5, h6 {
       overflow: hidden;
       background: url(../images/home.png) no-repeat 50%;
       display: block;
+      cursor: pointer;
     }
    }
   .form-seach {
@@ -155,8 +129,8 @@ h1, h2, h3, h4, h5, h6 {
       padding-right: 40px;
       border: none;
       height: 39px;
-      color: #ffffff;
-      box-shadow: inset 1px 1px 0 #4da9af;
+      color: map-get($color, white);
+      box-shadow: inset 1px 1px 0 #34da9af;
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       box-sizing: border-box;
@@ -175,9 +149,12 @@ h1, h2, h3, h4, h5, h6 {
       width: 22px;
       height: 23px;
       box-shadow: none;
-      transition: none;
       border: none;
       outline: none;
+      cursor: pointer;
+      &:hover{
+        background-position: 0 -43px;
+      };
     }
   }
 }
@@ -187,46 +164,75 @@ h1, h2, h3, h4, h5, h6 {
   background: url(../images/slide.png) no-repeat;
   .caption {
     width: 80%;
-    padding: 55px;
-    .start-prev {
-      width: 50%;
-      margin-top: 40px;
-      span {
-        background: url(../images/nav-slider.png) no-repeat;
-        display: block;
-        width: 110px;
+    padding: 149px 85px;
+    .start {
+      position: relative;
+      top: 190px;
+      right: 82px;
+      .start-prev {
+        left: 84px;
+        width: 53px;
         height: 54px;
-        cursor: pointer;
-        &:hover {
-          background-position: 0 -54px;
+        top: auto;
+        bottom: 108px;
+        margin: 0;
+        background: none;
+        position: absolute;
+        span {
+          background: url(../images/nav-slider.png) no-repeat 0 0;
+          @include span;
+          &:hover {
+            background-position: 0 -54px;
+          }
         }
-      }
+    }
+    .start-next {
+        width: 53px;
+        height: 54px;
+        top: auto;
+        bottom: 108px;
+        margin: 0;
+        background: none;
+        left: 139px;
+        position: absolute;
+        span {
+          background: url(../images/nav-slider.png) no-repeat -52px 0;
+          @include span;
+          &:hover {
+            background-position: -52px -54px;
+          }
+       }
     }
   }
-  h2 {
-    font-size: 50px;
-    line-height: 50px;
-    font-weight: 300;
-    color: map-get($color, skype);
-    margin: 0;
-    display: block;
-  }
-  b {
+    h2 {
+      font-size: 50px;
+      line-height: 50px;
+      font-weight: 300;
+      color: map-get($color, sky);
+      margin: 0;
+      display: block;
+      font-family: 'OpenSans';
+   }
+   b {
     font-weight: 600px;
     color: map-get($color, white);
+     font-family: 'OpenSansBold';
   }
+ }
 }
-
 /*featured*/
 .featured {
   height: 262px;
   background-color: map-get($color, gray_black);
   margin-top: 7px;
+  box-shadow: 1px 2px 0 rgba(0,0,0,0.3);
   .title-featured {
-    background-color: map-get($color, gray_bac);
     font-weight: 300;
     color: map-get($color, black);
     padding: 22px 32px 23px;
+    font-family: 'OpenSans';
+    font-size: 25px;
+    background-image: linear-gradient(to bottom, #fff, #dedede);
   }
   .carousel {
     width: 1071px;
@@ -246,7 +252,7 @@ h1, h2, h3, h4, h5, h6 {
     height: 119px;
     background-color: red;
     margin: 0 8px;
-    border: 6px solid #fff;
+    border: 6px solid map-get($color, white);
     &:hover {
       border-color: map-get($color, border_color);
     }
@@ -286,45 +292,52 @@ h1, h2, h3, h4, h5, h6 {
 
 /*news-content*/
 .news-content {
-  height: 430px;
-  background-color:pink;
-  margin-top: 30px;
+  width: 1200px;
+  margin-top: -190px;
   .gallary-news {
-    width: 100%;
     box-sizing: border-box;
-  }
-  .gallary-news-item {
-    margin: 0 11px;
-    float: left;
-    width: 270px;
-    height: 431px;
-    cursor: pointer;
-    @include rgb;
-    .online-img {
-      a {
-        border: none;
-        display: block;
-        overflow: hidden;
-      }
-      img {
-        vertical-align: middle;
-        border: 0;
-        width: 270px;
-        height: 109px;
-      }
-    }
+    .gallary-news-item {
+      float: left;
+      width: 270px;
+      height: 431px;
+      cursor: pointer;
+      margin-right: 30px;
+      @include rgb;
+      .online-img {
+        a {
+          border: none;
+          display: block;
+          overflow: hidden;
+        }
+        img {
+          vertical-align: middle;
+          border: 0;
+          width: 270px;
+          height: 109px;
+        }
+     }
   }
   .colorgb {
-     @include colorgb;
+    background-color: map-get($color, sky);
   }
   .colorgb1 {
-     @include colorgb1;
+    background-color: map-get($color, sky_1);
   }
   .colorgb2 {
-     @include colorgb2;
+    background-color: map-get($color, sky_2);
   }
   .colorgb3 {
-     @include colorgb3;
+    background-color: map-get($color, sky_3);
+  }
+}
+  .btn-color1 {
+     color: map-get($color, sky_1) !important;
+  }
+  .btn-color2 {
+    color: map-get($color, sky_2) !important;
+  }
+  .btn-color3 {
+    color: map-get($color, sky_3) !important;
   }
 }
 /**hello-content**/
@@ -334,6 +347,7 @@ h1, h2, h3, h4, h5, h6 {
     float: left;
     .gallary {
       width: 100%;
+      margin-top: 30px;
     }
     .galary-event-img {
       float: left;
@@ -347,14 +361,17 @@ h1, h2, h3, h4, h5, h6 {
       h4 {
         font-weight: 300;
         margin-bottom: 15px;
-        font: bold 20px/24px Open Sans;
+        font-family: 'OpenSans';
+        font-size: 20px;
       }
       p {
         margin-bottom: 50px;
+        width: 240px;
+        color: map-get($color, color_full);
       }
       }
-    .text {
-      text-align: left;
+      .text {
+        text-align: left;
       p {
         margin-bottom: 50px;
       }
@@ -367,8 +384,9 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 45px;
         line-height: 42px;
         margin: 8px 0 0;
-        color: #5ecdd4;
+        color: map-get($color, sky_char);
         font-weight: 600;
+        font-family: 'OpenSansBold';
       }
       .title-our {
         font-size: 25px;
@@ -376,6 +394,7 @@ h1, h2, h3, h4, h5, h6 {
         margin: 1px 0 25px 5px;
         color: #181818;
         font-weight: 300;
+        font-family: 'OpenSans';
       }
     }
   }
@@ -389,43 +408,59 @@ h1, h2, h3, h4, h5, h6 {
     .galary-event-img {
       float: left;
       height: 307px;
+      margin-top: 30px;
       h2 {
         margin-bottom: 33px;
+        font-family: 'OpenSans';
+        font-size: 25px;
+        color: #181818;
+        font-weight: 300;
       }
       p {
-         margin-bottom: 26px;   
+        margin-bottom: 26px;
       }
       span {
-        color: map-get($color, sky);
+        color: map-get($color, sky_char);
+         font-family: 'OpenSansBold';
       }
+
       .btn1 {
         @include btn;
       }
     }
     .galary-event-desc {
       float: left;
-      width: 296px;
+      width: 279px;
       height: 307px;
       background-color: map-get($color, white);
-      margin-left: -27px;
+      margin-left: 14px;
+      margin-top: 30px;
       h2 {
         padding: 0 14px;
         margin-bottom: 33px;
+        font-family: 'OpenSans';
+        font-size: 25px;
+        color: map-get($color, colo_event);
       }
       span {
-        color: map-get($color, sky);
+        color: map-get($color, sky_dam);
+        font-family: 'OpenSansBold';
       }
       p {
         padding: 0 14px;
         margin-bottom: 26px;
+        width: 350px;
       }
       b {
         padding: 0 14px;
       }
+      strong {
+        font-weight: 300!important;
+      }
       .btn1 {
         @include btn;
       }
-      }
+    }
   }
   .right {
     margin-top: -65px;
@@ -434,22 +469,38 @@ h1, h2, h3, h4, h5, h6 {
 /*footer-content*/
 .full {
   background-color: map-get($color, btn);
-  height: 317px;
+  height: 415px;
   .footer-content {
-      .logo-footer-left {
-        float: left;
-        padding-top: 16px;
-        font: 300 14px/1em 'Open Sans',sans-serif;
-        color: #d9bb4b;
-        text-transform: uppercase;
-        float: none;
+    .logo-footer-left {
+      float: left;
+      padding-top: 16px;
+      font-family: 'OpenSans';
+      font-size: 16px;
+      color: #d9bb4b;
+      text-transform: uppercase;
+      width: 500px;
+      margin-top: 100px;
+    }
+    span {
+      display: inline-block;
+      vertical-align: bottom;
+      padding: 13px 3px;
+    }
+    a {
+      color: map-get($color, border_color);
+      text-decoration: none;
+      &:hover {
+         color: map-get($color, sky);
+      };
+    }
+    .footer-category-right {
+      float: right;
+      width: 649px;
+      height: 349px;
+      .gallar-cate {
+        width: 100%;
       }
-      .footer-category-right {
-        float: right;
-        width: 500px;
-        height: 250px;
-      }
-   }  
+      @include list-footer;
+    }
+  }
 }
-
-

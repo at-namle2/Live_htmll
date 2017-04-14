@@ -1,11 +1,20 @@
 @mixin rgb {
+    h4 {
+      font-size: 25px;
+      color: map-get($color, white);
+      padding: 0px 32px;
+    }
     h5 {
       color: map-get($color, white);
       padding: 18px 32px;
       margin: 0;
       font-size: 25px;
       font-weight: 600;
+      font-family: 'OpenSans';
     }
+    span {
+      font-family: 'OpenSansBold';
+      }
     p {
        padding: 30px 31px;
        color: map-get($color, white);
@@ -18,45 +27,83 @@
         box-shadow: none;
         padding: 10px 24px;
         color: map-get($color, sky);
-        font: 600 14px/1.2em 'Open Sans',sans-serif;
+        font-family: 'OpenSans';
         text-transform: uppercase;
         text-decoration: none;
         border: none;
         font-weight: 600;
         &:hover {
           background-color: map-get($color, button_btn);
+          color: map-get($color, white) !important;
         }
       }
     }
 }
-@mixin colorgb {
-  background-color: map-get($color, sky);
-}
-@mixin colorgb1 {
-  background-color: map-get($color, sky_1);
-}
-@mixin colorgb2 {
-  background-color: map-get($color, sky_2);
-}
-@mixin colorgb3 {
-  background-color: map-get($color, sky_3);
-}
 
 @mixin btn {
-        background: map-get($color, btn);
-        box-shadow: none;
-        padding: 10px 24px;
-        color: map-get($color, sky);
-        font: 600 14px/1.2em 'Open Sans',sans-serif;
-        text-transform: uppercase;
-        text-decoration: none;
-        border: none;
-        font-weight: 600;
-        box-shadow: 1px 2px 0 rgba(0,0,0,0.3);
-        &:hover {
-        background-color: map-get($color, sky);
-        box-shadow: none;
-        text-decoration: none;
+  background: map-get($color, btn);
+  box-shadow: none;
+  padding: 10px 24px;
+  color: map-get($color, white);
+  font-family: 'OpenSans';
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  font-weight: 600;
+  box-shadow: 1px 2px 0 rgba(0,0,0,0.3);
+  &:hover {
+  background-color: map-get($color, sky);
+  box-shadow: none;
+  text-decoration: none;
+  color: map-get($color, white);
+  }
+}
+
+@mixin list-footer {
+    .gallar-cate-item {
+      float: left;
+      width: 174px;
+      height: 203px;
+      margin: 101px 19px;
+      h4 {
         color: map-get($color, white);
+        font-size: 25px;
+        font-weight: 300p;
+        margin-bottom: 32px;
+        line-height: 10px;
+        font-family: 'OpenSans';
       }
+      .list-footer {
+        margin: 0;
+        padding: 0;
+      }
+      .list-footer-item {
+        display: block;
+        list-style: none;
+        img {
+          padding: 0 11px 18px;
+          margin-left: -11px;
+          display: inline-block;
+          vertical-align: top;
+          vertical-align: text-top;
+        }
+        a {
+          text-decoration: none;
+          font: 14px/33px;
+          color: #787878;
+          text-transform: none;
+          &:hover {
+            color:map-get($color, cam_ry);
+          }
+        }
+      }
+   }
+}
+
+@mixin span {
+  display: block;
+  width: 53px;
+  height: 54px;
+  cursor: pointer;
+  box-shadow: 2px 2px 0 rgba(29,29,34,0.4);
 }
