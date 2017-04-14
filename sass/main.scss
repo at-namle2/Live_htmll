@@ -87,7 +87,7 @@
       -moz-box-sizing: border-box;
       box-sizing: border-box
     }
-    a {
+     a {
       border: none;
       padding: 26px 0 27px;
       display: block;
@@ -95,7 +95,7 @@
       border-radius: 0;
       position: relative;
       letter-spacing: -0.5px;
-      transition: all 0.3s ease 0s;
+      /*transition: all 0.3s ease 0s;*/
       font-weight: 600;
       overflow: hidden;
       color: map-get($color, white);
@@ -103,6 +103,9 @@
       text-align: center;
       text-decoration: none;
       cursor: pointer;
+      &:hover {
+        background-color: #44c3cb;
+      }
     }
     .home {
       width: 67px;
@@ -118,9 +121,8 @@
    }
   .form-seach {
     position: relative;
-    width: 100%;
     text-align: right;
-    margin: 16px -36px 0;
+    margin: 16px 24px 0;
     top: 16px;
     .input {
       width: 242px;
@@ -131,10 +133,9 @@
       height: 39px;
       color: map-get($color, white);
       box-shadow: inset 1px 1px 0 #34da9af;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
       box-sizing: border-box;
       outline: none;
+      text-indent: 20px;
     }
     .submit {
       position: absolute;
