@@ -1,0 +1,42 @@
+// **********************************
+//   font-face
+// **********************************
+@font-face {
+  font-family: "AvenirNext-Bold";
+  src: url(asset-path("fonts/AvenirNextLTPro-Bold.eot"));
+  src: url(asset-path("fonts/AvenirNextLTPro-Bold.woff")) format("woff"),
+  url(asset-path("fonts/AvenirNextLTPro-Bold.ttf")) format("truetype"),
+  url(asset-path("fonts/AvenirNextLTPro-Bold.svg")) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "futura-medium";
+  src: url(asset-path("fonts/futura-medium.eot"));
+  src: url(asset-path("fonts/futura-medium.woff")) format("woff"),
+  url(asset-path("assets/fonts/futura-medium.ttf")) format("truetype"),
+  url(asset-path("fonts/futura-medium.svg")) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+// **********************************
+//   font-family
+// **********************************
+$font-family-body: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", Arial, "メイリオ", sans-serif;
+$font-family-w6: "ヒラギノ角ゴ Pro W6", HiraKakuPro-W6, Arial, "メイリオ", sans-serif;
+$font-awesome: "FontAwesome";
+$font-avenirnext-bold: "AvenirNext-Bold", sans-serif;
+$font-futura-medium: "futura-medium", sans-serif;
+// **********************************
+//   COLOR
+// **********************************
+// Brand Color
+$color-primary: #ff730e;
+
+// Application Color
+$color-a: #ffffff;
+$color-b: #f7f7f7;
+$color-c: #000000;
+$color-d: #ff730e;
+$color-e: #333333;

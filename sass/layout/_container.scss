@@ -1,0 +1,307 @@
+ /*slide-shows*/
+.slide-shows {
+  height: 441px;
+  background: url(../images/slide.png) no-repeat;
+  .caption {
+    width: 80%;
+    padding: 149px 85px;
+    .start {
+      position: relative;
+      top: 190px;
+      right: 82px;
+      .start-prev {
+        left: 84px;
+        width: 53px;
+        height: 54px;
+        top: auto;
+        bottom: 108px;
+        margin: 0;
+        background: none;
+        position: absolute;
+        transition: all 0.5s;
+        span {
+          background: url(../images/nav-slider.png) no-repeat 0 0;
+          @include span;
+          &:hover {
+            background-position: 0 -54px;
+          }
+       }
+    }
+    .start-next {
+      width: 53px;
+      height: 54px;
+      top: auto;
+      bottom: 108px;
+      margin: 0;
+      background: none;
+      left: 139px;
+      position: absolute;
+      span {
+        background: url(../images/nav-slider.png) no-repeat -52px 0;
+        @include span;
+        &:hover {
+          background-position: -52px -54px;
+        }
+     }
+  }
+}
+    h2 {
+      font-size: 50px;
+      line-height: 50px;
+      font-weight: 300;
+      color: map-get($color, sky);
+      margin: 0;
+      display: block;
+      font-family: 'OpenSans';
+   }
+   b {
+    font-weight: 600px;
+    color: map-get($color, white);
+     font-family: 'OpenSansBold';
+  }
+ }
+}
+/*featured*/
+.featured {
+  height: 262px;
+  background-color: map-get($color, gray_black);
+  margin-top: 7px;
+  box-shadow: 1px 2px 0 rgba(0,0,0,0.3);
+  .title-featured {
+    font-weight: 300;
+    color: map-get($color, black);
+    padding: 22px 32px 23px;
+    font-family: 'OpenSans';
+    font-size: 25px;
+    background-image: linear-gradient(to bottom, #fff, #dedede);
+  }
+  .carousel {
+    width: 1071px;
+    height: 133px;
+    margin: 0 auto;
+    margin-top: 25px;
+  }
+  .carousel-list {
+    margin: 0px;
+    padding: 0px;
+  }
+  .carousel-list-item {
+    display: inline-block;
+    float: left;
+    list-style: none;
+    width: 185px;
+    height: 119px;
+    background-color: red;
+    margin: 0 8px;
+    border: 6px solid map-get($color, white);
+    &:hover {
+      border-color: map-get($color, border_color);
+    }
+    img {
+      display: block;
+      margin: 0;
+      padding: 0;
+      max-width: 100%;
+      max-height: 100%;
+      border: none;
+    }
+  }
+}
+.nes-nav {
+  position: relative;
+  background-position: top right;
+  .nes-nav-prev {
+    display: none;
+  }
+  .nes-nav-nest {
+    text-indent: -9999px;
+    width: 54px;
+    position: absolute;
+    height: 73px;
+    right: -70px;
+    top: 34px;
+    background-position: -52px 2px;
+    background: transparent url(../images/nav.png) no-repeat top right;
+    opacity: 0.8;
+    cursor: pointer;
+     &:hover {
+      background-position: -51px -73px;
+    }
+  }
+}
+/*news-content*/
+.news-content {
+  width: 1200px;
+  margin-top: -190px;
+  .gallary-news {
+    box-sizing: border-box;
+    .gallary-news-item {
+      float: left;
+      width: 270px;
+      height: 431px;
+      cursor: pointer;
+      margin-right: 30px;
+      @include rgb;
+      .online-img {
+        a {
+          border: none;
+          display: block;
+          overflow: hidden;
+        }
+        img {
+          vertical-align: middle;
+          border: 0;
+          width: 270px;
+          height: 109px;
+        }
+     }
+  }
+  .colorgb {
+    background-color: map-get($color, sky);
+  }
+  .colorgb1 {
+    background-color: map-get($color, sky_1);
+  }
+  .colorgb2 {
+    background-color: map-get($color, sky_2);
+  }
+  .colorgb3 {
+    background-color: map-get($color, sky_3);
+  }
+}
+  .btn-color1 {
+     color: map-get($color, sky_1) !important;
+  }
+  .btn-color2 {
+    color: map-get($color, sky_2) !important;
+  }
+  .btn-color3 {
+    color: map-get($color, sky_3) !important;
+  }
+}
+/**hello-content**/
+.hello-content {
+  .welcome-left {
+    width: 571px;
+    float: left;
+    .gallary {
+      width: 100%;
+      margin-top: 30px;
+    }
+    .galary-event-img {
+      float: left;
+      width: 303px;
+    }
+    .galary-event-desc {
+      float: left;
+      width: 267px;
+      height: 182px;
+      color: map-get($color, black);
+      h4 {
+        font-weight: 300;
+        margin-bottom: 15px;
+        font-family: 'OpenSans';
+        font-size: 20px;
+      }
+      p {
+        margin-bottom: 50px;
+        width: 240px;
+        color: map-get($color, color_full);
+      }
+      }
+      .text {
+        text-align: left;
+      p {
+        margin-bottom: 50px;
+      }
+      .btn1 {
+        @include btn;
+      }
+    }
+    .title-box {
+      .title-hello {
+        font-size: 45px;
+        line-height: 42px;
+        margin: 8px 0 0;
+        color: map-get($color, sky_char);
+        font-weight: 600;
+        font-family: 'OpenSansBold';
+      }
+      .title-our {
+        font-size: 25px;
+        line-height: 28px;
+        margin: 1px 0 25px 5px;
+        color: #181818;
+        font-weight: 300;
+        font-family: 'OpenSans';
+      }
+    }
+  }
+
+  .welcome-right {
+    width: 563px;
+    float: right;
+     .gallary {
+      width: 100%;
+    }
+    .galary-event-img {
+      float: left;
+      height: 307px;
+      margin-top: 30px;
+      h2 {
+        margin-bottom: 33px;
+        font-family: 'OpenSans';
+        font-size: 25px;
+        color: #181818;
+        font-weight: 300;
+      }
+      p {
+        margin-bottom: 26px;
+      }
+      span {
+        color: map-get($color, sky_char);
+         font-family: 'OpenSansBold';
+      }
+
+      .btn1 {
+        @include btn;
+      }
+    }
+    .galary-event-desc {
+      float: left;
+      width: 279px;
+      height: 307px;
+      background-color: map-get($color, white);
+      margin-left: 14px;
+      margin-top: 30px;
+      h2 {
+        padding: 0 14px;
+        margin-bottom: 33px;
+        font-family: 'OpenSans';
+        font-size: 25px;
+        color: map-get($color, colo_event);
+      }
+      span {
+        color: map-get($color, sky_dam);
+        font-family: 'OpenSansBold';
+      }
+      p {
+        padding: 0 14px;
+        margin-bottom: 26px;
+        width: 350px;
+      }
+      b {
+        padding: 0 14px;
+      }
+      strong {
+        font-weight: 300!important;
+      }
+      .btn1 {
+        @include btn;
+      }
+    }
+  }
+  .right {
+    margin-top: -65px;
+  }
+}

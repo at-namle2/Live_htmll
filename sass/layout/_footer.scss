@@ -1,0 +1,39 @@
+/*###########footer-content###########*/
+.full {
+  background-color: map-get($color, btn);
+  height: 415px;
+  .footer-content {
+    .logo-footer-left {
+      float: left;
+      padding-top: 16px;
+      font-family: 'OpenSans';
+      font-size: 16px;
+      color: #d9bb4b;
+      text-transform: uppercase;
+      width: 500px;
+      margin-top: 100px;
+    }
+    span {
+      display: inline-block;
+      vertical-align: bottom;
+      padding: 13px 3px;
+    }
+    a {
+      color: map-get($color, border_color);
+      text-decoration: none;
+      transition: all 0.5s;
+      &:hover {
+         color: map-get($color, sky);
+      };
+    }
+    .footer-category-right {
+      float: right;
+      width: 649px;
+      height: 349px;
+      .gallar-cate {
+        width: 100%;
+      }
+      @include list-footer;
+    }
+  }
+}
